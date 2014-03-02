@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="tscui.Pages.Collision.CollisionItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="200" Height="203">
+    <Grid>
+        <Canvas Width="200" Height="203" Background="White">
+            <Image HorizontalAlignment="Left" Source="/tscui;component/Resources/Images/back20130627.jpg" Height="200" VerticalAlignment="Top" Width="200"/>
+            <Image x:Name="northLeft" Canvas.Left="92" Canvas.Top="157" Height="20" RenderOptions.BitmapScalingMode="Linear" Source="/tscui;component/Resources/Images/nolight.png" Width="6">
+
+            </Image>
+            <Image x:Name="eastPedestrain1" Canvas.Left="146" Canvas.Top="76" Height="20" RenderOptions.BitmapScalingMode="Linear" Source="/tscui;component/Resources/Images/nolight.png" Width="6">
+
+            </Image>
+            <Image x:Name="eastPedestrain2" Canvas.Left="146" Canvas.Top="108" Height="20" RenderOptions.BitmapScalingMode="Linear" Source="/tscui;component/Resources/Images/nolight.png" Width="6">
+
+            </Image>
+            <Image x:Name="westPedestrain1" Canvas.Left="47" Canvas.Top="74" Height="20" RenderOptions.BitmapScalingMode="Linear" Source="/tscui;component/Resources/Images/nolight.png" Width="6"></Image>
+            <Image x:Name="westPedestrain2" Canvas.Left="47" Canvas.Top="103" Height="20" RenderOptions.BitmapScalingMode="Linear" Source="/tscui;component/Resources/Images/nolight.png" Width="6"></Image>
+            <Image x:Name="northStraight" Canvas.Left="84" Canvas.Top="157" Height="20" Source="/tscui;component/Resources/Images/nolight.png" Width="6">
+
+            </Image>
+            <Image x:Name="northOther" Canvas.Left="69" Canvas.Top="157" Height="20" Source="/tscui;component/Resources/Images/nolight.png" Width="6">
+
+            </Image>
+            <Image x:Name="westRight" Canvas.Left="158" Canvas.Top="117" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20">
+
+            </Image>
+            <Image x:Name="westLeft" Canvas.Left="158" Canvas.Top="102" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20">
+
+            </Image>
+            <Image x:Name="westOther" Canvas.Left="158" Canvas.Top="125" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20">
+
+            </Image>
+            <Image x:Name="eastRight" Canvas.Left="22" Canvas.Top="76" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20">
+
+            </Image>
+            <Image x:Name="eastLeft" Canvas.Left="22" Canvas.Top="92" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20">
+
+            </Image>
+            <Image x:Name="southPedestrain1" Canvas.Left="109" Canvas.Top="146" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20">
+
+            </Image>
+            <Image x:Name="southPedestrain2" Canvas.Left="77" Canvas.Top="146" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20">
+
+            </Image>
+            <Image x:Name="northPedestrain1" Canvas.Left="74" Canvas.Top="48" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20"></Image>
+            <Image x:Name="northPedestrain2" Canvas.Left="106" Canvas.Top="48" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20"></Image>
+            <Image x:Name="eastStraight" Canvas.Left="22" Canvas.Top="84" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20">
+
+            </Image>
+            <Image x:Name="southLeft" Canvas.Left="103" Canvas.Top="23" Height="20" Source="/tscui;component/Resources/Images/nolight.png" Width="6">
+
+            </Image>
+            <Image x:Name="southStraight" Canvas.Left="111" Canvas.Top="23" Height="20" Source="/tscui;component/Resources/Images/nolight.png" Width="6">
+
+            </Image>
+            <Image x:Name="southRight" Canvas.Left="118" Canvas.Top="23" Height="20" Source="/tscui;component/Resources/Images/nolight.png" Width="6">
+
+            </Image>
+            <Image x:Name="northRight" Canvas.Left="77" Canvas.Top="157" Height="20" Source="/tscui;component/Resources/Images/nolight.png" Width="6">
+
+            </Image>
+            <Image x:Name="southOther" Canvas.Left="126" Canvas.Top="23" Height="20" Source="/tscui;component/Resources/Images/nolight.png" Width="6">
+
+            </Image>
+            <Image x:Name="westStraight" Canvas.Left="158" Canvas.Top="110" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20">
+
+            </Image>
+            <Image x:Name="eastOther" Canvas.Left="22" Canvas.Top="68" Height="6" Source="/tscui;component/Resources/Images/nolight1.png" Width="20">
+
+            </Image>
+            <Label x:Name="lblId" Content="1" Canvas.Left="92" Canvas.Top="85" Foreground="{DynamicResource ZuneColor1Brush}"/>
+        </Canvas>
+    </Grid>
+</UserControl>

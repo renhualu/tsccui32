@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{628780AB-B360-40F1-A6C1-0FF25F2B2A6B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tscui</RootNamespace>
+    <AssemblyName>tscui</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PerfCenterCpl.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\tscui.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\tscui.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.89.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\sqlite-netFx40-binary-bundle-Win32-2010-1.0.90.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Apex, Version=1.4.0.0, Culture=neutral, PublicKeyToken=98d06957926c086d, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\..\..\ExtendedWPFToolkit_Binaries\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\..\..\ExtendedWPFToolkit_Binaries\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\..\..\ExtendedWPFToolkit_Binaries\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\..\..\ExtendedWPFToolkit_Binaries\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid">
+      <HintPath>..\..\..\ExtendedWPFToolkit_Binaries\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\..\..\ExtendedWPFToolkit_Binaries\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Models\AdapterPara.cs" />
+    <Compile Include="Models\AdaptStageTime.cs" />
+    <Compile Include="Models\CntDownDev.cs" />
+    <Compile Include="Models\Collision16.cs" />
+    <Compile Include="Models\Collision.cs" />
+    <Compile Include="Models\Constant.cs" />
+    <Compile Include="Models\Define.cs" />
+    <Compile Include="Models\Detector.cs" />
+    <Compile Include="Models\DetectorAlert.cs" />
+    <Compile Include="Models\DetectorState.cs" />
+    <Compile Include="Models\DetExtend.cs" />
+    <Compile Include="Models\DevMonitor.cs" />
+    <Compile Include="Models\EhoCntDown.cs" />
+    <Compile Include="Models\EventLog.cs" />
+    <Compile Include="Models\EventType.cs" />
+    <Compile Include="Models\LampCheck.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Module.cs" />
+    <Compile Include="Models\Node.cs" />
+    <Compile Include="Models\Pattern.cs" />
+    <Compile Include="Models\PhaseOutputState.cs" />
+    <Compile Include="Models\PhaseToDirec.cs" />
+    <Compile Include="Models\Plan.cs" />
+    <Compile Include="Models\ReportTscStatus.cs" />
+    <Compile Include="Models\SpecFun.cs" />
+    <Compile Include="Models\StageFactTime.cs" />
+    <Compile Include="Models\StagePattern16.cs" />
+    <Compile Include="Models\StagePattern.cs" />
+    <Compile Include="Models\System.cs" />
+    <Compile Include="Models\DetectData.cs" />
+    <Compile Include="Models\TscData.cs" />
+    <Compile Include="Models\VariableSign.cs" />
+    <Compile Include="Models\VehicleStat.cs" />
+    <Compile Include="Pages\BaseTime\SeasonTimeView.xaml.cs">
+      <DependentUpon>SeasonTimeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BaseTime\SeasonTimeViewModel.cs" />
+    <Compile Include="Pages\Collision\CollisionItem.xaml.cs">
+      <DependentUpon>CollisionItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Config\ConfigView.xaml.cs">
+      <DependentUpon>ConfigView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Config\ConfigViewModel.cs" />
+    <Compile Include="Pages\LoadingMask\LoadingMask.xaml.cs">
+      <DependentUpon>LoadingMask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Module\ModuleView.xaml.cs">
+      <DependentUpon>ModuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Module\ModuleViewModel.cs" />
+    <Compile Include="Pages\Schedules\ScheduleView.xaml.cs">
+      <DependentUpon>ScheduleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Schedules\ScheduleViewModel.cs" />
+    <Compile Include="Pages\Degradation\DegradationView.xaml.cs">
+      <DependentUpon>DegradationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Degradation\DegradationViewModel.cs" />
+    <Compile Include="Pages\LightCheck\CheckItem.xaml.cs">
+      <DependentUpon>CheckItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LightCheck\LightCheckView.xaml.cs">
+      <DependentUpon>LightCheckView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LightCheck\LightCheckViewModel.cs" />
+    <Compile Include="Pages\Log\LogsView.xaml.cs">
+      <DependentUpon>LogsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Log\LogsViewModel.cs" />
+    <Compile Include="Pages\Stage\StageItem.xaml.cs">
+      <DependentUpon>StageItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\ChannelPopup.xaml.cs">
+      <DependentUpon>ChannelPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\DetectorPopup.xaml.cs">
+      <DependentUpon>DetectorPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\GbtError.xaml.cs">
+      <DependentUpon>GbtError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\SuccessPopup.xaml.cs">
+      <DependentUpon>SuccessPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\FailePopup.xaml.cs">
+      <DependentUpon>FailePopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ByteUtils.cs" />
+    <Compile Include="Service\EchoCountDownService.cs" />
+    <Compile Include="Service\GBT_20999_Utils.cs" />
+    <Compile Include="Service\RuntasticHeartRate.cs" />
+    <Compile Include="Service\TscDataUtils.cs" />
+    <Compile Include="Utils\FolderBrowserHelper.cs" />
+    <Compile Include="Utils\FtpHelper.cs" />
+    <Compile Include="Utils\INIClass.cs" />
+    <Compile Include="Utils\SQLiteHelper.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Page Include="Pages\Apex\ApexView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\BaseTime\BaseTimeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\BaseTime\SeasonTimeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Calendar\CalendarView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Collision\CollisionItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Collision\CollisionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Config\ConfigView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Control\ControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LoadingMask\LoadingMask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Module\ModuleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Schedules\ScheduleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CountDown\CountDownView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Degradation\DegradationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Detector\DetectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LightCheck\CheckItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LightCheck\LightCheckView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Log\LogsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Phase\PhaseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Stage\StageItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Stage\StageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ThePages\ThePagesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Update\UpdateView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\VariableSign\VariableSignView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popups\ChannelPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Popups\DetectorPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popups\GbtError.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Popups\SuccessPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Popups\FailePopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ResourceDictionaries\ZuneListBoxResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ResourceDictionaries\ZuneScrollBarResourceDictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ResourceDictionaries\ZuneResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Popups\ExamplePopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Music\MusicView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DetectorAdvanced\DetectorAdvancedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="tscuiWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Channel.cs" />
+    <Compile Include="Models\ItscuiModel.cs" />
+    <Compile Include="Models\OverlapPhase.cs" />
+    <Compile Include="Models\Phase.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Models\tscuiModel.cs" />
+    <Compile Include="Models\Udp.cs" />
+    <Compile Include="Pages\Apex\ApexView.xaml.cs">
+      <DependentUpon>ApexView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Apex\ApexViewModel.cs" />
+    <Compile Include="Pages\BaseTime\BaseTimeView.xaml.cs">
+      <DependentUpon>BaseTimeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BaseTime\BaseTimeViewModel.cs" />
+    <Compile Include="Pages\Calendar\CalendarView.xaml.cs">
+      <DependentUpon>CalendarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Calendar\CalendarViewModel.cs" />
+    <Compile Include="Pages\Collision\CollisionView.xaml.cs">
+      <DependentUpon>CollisionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Collision\CollisionViewModel.cs" />
+    <Compile Include="Pages\Control\ControlView.xaml.cs">
+      <DependentUpon>ControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Control\ControlViewModel.cs" />
+    <Compile Include="Pages\CountDown\CountDownView.xaml.cs">
+      <DependentUpon>CountDownView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CountDown\CountDownViewModel.cs" />
+    <Compile Include="Pages\Detector\DetectorView.xaml.cs">
+      <DependentUpon>DetectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Detector\DetectorViewModel.cs" />
+    <Compile Include="Pages\Phase\PhaseView.xaml.cs">
+      <DependentUpon>PhaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Phase\PhaseViewModel.cs" />
+    <Compile Include="Pages\Stage\StageView.xaml.cs">
+      <DependentUpon>StageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Stage\StageViewModel.cs" />
+    <Compile Include="Pages\ThePages\ThePagesView.xaml.cs">
+      <DependentUpon>ThePagesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ThePages\ThePagesViewModel.cs" />
+    <Compile Include="Pages\Update\UpdateView.xaml.cs">
+      <DependentUpon>UpdateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Update\UpdateViewModel.cs" />
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="Pages\Music\MusicViewModel.cs" />
+    <Compile Include="Pages\PageViewModel.cs" />
+    <Compile Include="Pages\DetectorAdvanced\DetectorAdvancedViewModel.cs" />
+    <Compile Include="Pages\VariableSign\VariableSignView.xaml.cs">
+      <DependentUpon>VariableSignView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VariableSign\VariableSignViewModel.cs" />
+    <Compile Include="Popups\ExamplePopup.xaml.cs">
+      <DependentUpon>ExamplePopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Music\MusicView.xaml.cs">
+      <DependentUpon>MusicView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DetectorAdvanced\DetectorAdvancedView.xaml.cs">
+      <DependentUpon>DetectorAdvancedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Converters\WindowStateToButtonVisibilityConverter.cs" />
+    <Compile Include="Resources\Converters\WindowStateToBorderThicknessConverter.cs" />
+    <Compile Include="tscuiWindow.xaml.cs">
+      <DependentUpon>tscuiWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ModelAttribute.png" />
+    <Resource Include="Resources\Images\Close.png" />
+    <Resource Include="Resources\Images\CloseOver.png" />
+    <Resource Include="Resources\Images\Maximize.png" />
+    <Resource Include="Resources\Images\MaximizeOver.png" />
+    <Resource Include="Resources\Images\Minimize.png" />
+    <Resource Include="Resources\Images\MinimizeOver.png" />
+    <Resource Include="Resources\Images\Restore.png" />
+    <Resource Include="Resources\Images\RestoreOver.png" />
+    <Resource Include="Resources\Images\UsingTheModel.png" />
+    <Resource Include="Resources\Images\ShowPopop.png" />
+    <Resource Include="Resources\Images\ViewModel.png" />
+    <Resource Include="Resources\Images\View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\conflictl.jpg" />
+    <Resource Include="Resources\Images\conflictped.jpg" />
+    <Resource Include="Resources\Images\conflictr.jpg" />
+    <Resource Include="Resources\Images\conflictrs.jpg" />
+    <Resource Include="Resources\Images\conflictrsl.jpg" />
+    <Resource Include="Resources\Images\conflicts.jpg" />
+    <Resource Include="Resources\Images\conflictsl.jpg" />
+    <Resource Include="Resources\Images\greenl.jpg" />
+    <Resource Include="Resources\Images\greenped.jpg" />
+    <Resource Include="Resources\Images\greenr.jpg" />
+    <Resource Include="Resources\Images\greenrs.jpg" />
+    <Resource Include="Resources\Images\greenrsl.jpg" />
+    <Resource Include="Resources\Images\greens.jpg" />
+    <Resource Include="Resources\Images\greensl.jpg" />
+    <Resource Include="Resources\Images\redl.jpg" />
+    <Resource Include="Resources\Images\redped.jpg" />
+    <Resource Include="Resources\Images\redr.jpg" />
+    <Resource Include="Resources\Images\redrs.jpg" />
+    <Resource Include="Resources\Images\redrsl.jpg" />
+    <Resource Include="Resources\Images\reds.jpg" />
+    <Resource Include="Resources\Images\redsl.jpg" />
+    <Resource Include="Resources\Images\whitel.jpg" />
+    <Resource Include="Resources\Images\whiteped.jpg" />
+    <Resource Include="Resources\Images\whiter.jpg" />
+    <Resource Include="Resources\Images\whiters.jpg" />
+    <Resource Include="Resources\Images\whitersl.jpg" />
+    <Resource Include="Resources\Images\whitesl.jpg" />
+    <Resource Include="Resources\Images\yellowl.jpg" />
+    <Resource Include="Resources\Images\yellowped.jpg" />
+    <Resource Include="Resources\Images\yellowr.jpg" />
+    <Resource Include="Resources\Images\yellowrs.jpg" />
+    <Resource Include="Resources\Images\yellowrsl.jpg" />
+    <Resource Include="Resources\Images\yellows.jpg" />
+    <Resource Include="Resources\Images\yellowsl.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\eastredl.png" />
+    <Resource Include="Resources\Images\eastredr.png" />
+    <Resource Include="Resources\Images\eastredrs.png" />
+    <Resource Include="Resources\Images\eastredrsl.png" />
+    <Resource Include="Resources\Images\eastreds.png" />
+    <Resource Include="Resources\Images\eastredsl.png" />
+    <Resource Include="Resources\Images\eastwhitel.png" />
+    <Resource Include="Resources\Images\eastwhiter.png" />
+    <Resource Include="Resources\Images\eastwhiters.png" />
+    <Resource Include="Resources\Images\eastwhitersl.png" />
+    <Resource Include="Resources\Images\eastwhites.png" />
+    <Resource Include="Resources\Images\eastwhitesl.png" />
+    <Resource Include="Resources\Images\eastyellowl.png" />
+    <Resource Include="Resources\Images\eastyellowr.png" />
+    <Resource Include="Resources\Images\eastyellowrs.png" />
+    <Resource Include="Resources\Images\eastyellowrsl.png" />
+    <Resource Include="Resources\Images\eastyellows.png" />
+    <Resource Include="Resources\Images\eastyellowsl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\northredl.png" />
+    <Resource Include="Resources\Images\northredr.png" />
+    <Resource Include="Resources\Images\northredrs.png" />
+    <Resource Include="Resources\Images\northredrsl.png" />
+    <Resource Include="Resources\Images\northreds.png" />
+    <Resource Include="Resources\Images\northredsl.png" />
+    <Resource Include="Resources\Images\northwhitel.png" />
+    <Resource Include="Resources\Images\northwhiteped.png" />
+    <Resource Include="Resources\Images\northwhiter.png" />
+    <Resource Include="Resources\Images\northwhiters.png" />
+    <Resource Include="Resources\Images\northwhitersl.png" />
+    <Resource Include="Resources\Images\northwhites.jpg" />
+    <Resource Include="Resources\Images\northwhites.png" />
+    <Resource Include="Resources\Images\northwhitesl.png" />
+    <Resource Include="Resources\Images\northyellowl.png" />
+    <Resource Include="Resources\Images\northyellowr.png" />
+    <Resource Include="Resources\Images\northyellowrs.png" />
+    <Resource Include="Resources\Images\northyellowrsl.png" />
+    <Resource Include="Resources\Images\northyellows.png" />
+    <Resource Include="Resources\Images\northyellowsl.png" />
+    <Resource Include="Resources\Images\redped.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\southredl.png" />
+    <Resource Include="Resources\Images\southredr.png" />
+    <Resource Include="Resources\Images\southredrs.png" />
+    <Resource Include="Resources\Images\southredrsl.png" />
+    <Resource Include="Resources\Images\southreds.png" />
+    <Resource Include="Resources\Images\southredsl.png" />
+    <Resource Include="Resources\Images\southwhitel.png" />
+    <Resource Include="Resources\Images\southwhiter.png" />
+    <Resource Include="Resources\Images\southwhiters.png" />
+    <Resource Include="Resources\Images\southwhitersl.png" />
+    <Resource Include="Resources\Images\southwhites.png" />
+    <Resource Include="Resources\Images\southwhitesl.png" />
+    <Resource Include="Resources\Images\southyellowl.png" />
+    <Resource Include="Resources\Images\southyellowr.png" />
+    <Resource Include="Resources\Images\southyellowrs.png" />
+    <Resource Include="Resources\Images\southyellowrsl.png" />
+    <Resource Include="Resources\Images\southyellows.png" />
+    <Resource Include="Resources\Images\southyellowsl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\westredl.png" />
+    <Resource Include="Resources\Images\westredr.png" />
+    <Resource Include="Resources\Images\westredrs.png" />
+    <Resource Include="Resources\Images\westredrsl.png" />
+    <Resource Include="Resources\Images\westreds.png" />
+    <Resource Include="Resources\Images\westredsl.png" />
+    <Resource Include="Resources\Images\westwhitel.png" />
+    <Resource Include="Resources\Images\westwhiter.png" />
+    <Resource Include="Resources\Images\westwhiters.png" />
+    <Resource Include="Resources\Images\westwhitersl.png" />
+    <Resource Include="Resources\Images\westwhites.png" />
+    <Resource Include="Resources\Images\westwhitesl.png" />
+    <Resource Include="Resources\Images\westyellowl.png" />
+    <Resource Include="Resources\Images\westyellowr.png" />
+    <Resource Include="Resources\Images\westyellowrs.png" />
+    <Resource Include="Resources\Images\westyellowrsl.png" />
+    <Resource Include="Resources\Images\westyellows.png" />
+    <Resource Include="Resources\Images\westyellowsl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\northgreenl.png" />
+    <Resource Include="Resources\Images\northgreenped.png" />
+    <Resource Include="Resources\Images\northgreenr.png" />
+    <Resource Include="Resources\Images\northgreenrs.png" />
+    <Resource Include="Resources\Images\northgreenrsl.png" />
+    <Resource Include="Resources\Images\northgreens.png" />
+    <Resource Include="Resources\Images\northgreensl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\southgreenl.png" />
+    <Resource Include="Resources\Images\southgreenr.png" />
+    <Resource Include="Resources\Images\southgreenrs.png" />
+    <Resource Include="Resources\Images\southgreenrsl.png" />
+    <Resource Include="Resources\Images\southgreens.png" />
+    <Resource Include="Resources\Images\southgreensl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\westgreenl.png" />
+    <Resource Include="Resources\Images\westgreenr.png" />
+    <Resource Include="Resources\Images\westgreenrs.png" />
+    <Resource Include="Resources\Images\westgreenrsl.png" />
+    <Resource Include="Resources\Images\westgreens.png" />
+    <Resource Include="Resources\Images\westgreensl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\eastgreenl.png" />
+    <Resource Include="Resources\Images\eastgreenr.png" />
+    <Resource Include="Resources\Images\eastgreenrs.png" />
+    <Resource Include="Resources\Images\eastgreenrsl.png" />
+    <Resource Include="Resources\Images\eastgreens.png" />
+    <Resource Include="Resources\Images\eastgreensl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\traffic_lights.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\traffic_lights.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\back20130627.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\greenlight.png" />
+    <Resource Include="Resources\Images\nolight.png" />
+    <Resource Include="Resources\Images\redlight.png" />
+    <Resource Include="Resources\Images\yellowlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\green.png" />
+    <Resource Include="Resources\Images\red.png" />
+    <Resource Include="Resources\Images\yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\greenlight1.png" />
+    <Resource Include="Resources\Images\nolight1.png" />
+    <Resource Include="Resources\Images\redlight1.png" />
+    <Resource Include="Resources\Images\yellowlight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Db\Config.ini" />
+    <Resource Include="traffic_lights.ico" />
+    <Resource Include="PerfCenterCpl.ico" />
+    <Resource Include="Resources\Images\conflicts.png" />
+    <Resource Include="Resources\Images\west_greenlight.png" />
+    <Resource Include="Resources\Images\west_nolight.png" />
+    <Resource Include="Resources\Images\west_redlight.png" />
+    <Resource Include="Resources\Images\west_yellowlight.png" />
+    <Resource Include="Resources\Images\detectorline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Db\db.db" />
+    <None Include="doc\WPF_TSC_UI_P_用户手册_V1.0.doc" />
+    <None Include="doc\WPF_TSC_UI_P_用户手册_V1.0.pdf" />
+    <None Include="doc\Wpf配置软件开发.docx" />
+    <None Include="Resources\Images\conflicts.psd" />
+    <None Include="Resources\Images\eastgreenrsl.psd" />
+    <None Include="Resources\Images\northgreenl.psd" />
+    <None Include="Resources\Images\northgreenr.psd" />
+    <None Include="Resources\Images\southgreenrs.psd" />
+    <None Include="Resources\Images\westgreenl.psd" />
+    <None Include="Resources\Images\westgreensl.psd" />
+    <None Include="Resources\Images\未标题-1.psd" />
+    <None Include="Resources\Images\未标题-2.psd" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

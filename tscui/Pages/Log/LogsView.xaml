@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="tscui.Pages.Log.LogsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:apexBehaviours="clr-namespace:Apex.Behaviours;assembly=Apex"
+             xmlns:apexControls="clr-namespace:Apex.Controls;assembly=Apex"
+             xmlns:local="clr-namespace:tscui.Pages.Log"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    
+    <!-- The view model. -->
+    <UserControl.DataContext>
+        <local:LogsViewModel x:Name="viewModel" />
+    </UserControl.DataContext>
+
+    
+        <apexControls:ApexGrid Margin="0,0,0,0"
+        Rows="Auto,Auto,Auto,Auto,Auto,Auto,Auto" Width="800">
+        <StackPanel Height="545" HorizontalAlignment="Left" Name="splLog" VerticalAlignment="Top" Width="800" Loaded="splLog_Loaded" Margin="0,0,0,0"></StackPanel>
+    </apexControls:ApexGrid>
+
+</UserControl>

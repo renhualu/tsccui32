@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="tscui.Pages.VariableSign.VariableSignView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:apexBehaviours="clr-namespace:Apex.Behaviours;assembly=Apex"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:tscui.Pages.VariableSign"
+             xmlns:apexMVVM="clr-namespace:Apex.MVVM;assembly=Apex"
+             xmlns:apexCommands="clr-namespace:Apex.Commands;assembly=Apex"
+             xmlns:apexControls="clr-namespace:Apex.Controls;assembly=Apex"
+             xmlns:apexConverters="clr-namespace:Apex.Converters;assembly=Apex"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800" Loaded="UserControl_Loaded">
+
+
+    <!-- The View creates its own ViewModel, so set the ViewModel 
+    to a new instance of the ViewModel class. -->
+    <apexMVVM:View.ViewModel>
+        <local:VariableSignViewModel x:Name="viewModel" />
+    </apexMVVM:View.ViewModel>
+
+    <Grid>
+        <DataGrid x:Name="dgdVariableSign" AutoGenerateColumns="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="600" Width="800">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="编号" Width="80" Binding="{Binding ucId}"/>
+                <DataGridTextColumn Header="控制方式" Width="80" Binding="{Binding ucCtrl}"/>
+                <DataGridTextColumn Header="方案号" Width="80" Binding="{Binding ucSchemeId}"/>
+                <DataGridTextColumn Header="编号" Width="80" Binding="{Binding ucOption}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="tscui.Pages.Degradation.DegradationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:apexBehaviours="clr-namespace:Apex.Behaviours;assembly=Apex"
+             xmlns:apexControls="clr-namespace:Apex.Controls;assembly=Apex"
+             xmlns:local="clr-namespace:tscui.Pages.Degradation"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800" Loaded="UserControl_Loaded">
+    
+    <!-- The view model. -->
+    <UserControl.DataContext>
+        <local:DegradationViewModel x:Name="viewModel" />
+    </UserControl.DataContext>
+
+    <ScrollViewer Margin="0,4,40,4" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <apexControls:ApexGrid Margin="40,0,0,0"
+        Rows="Auto,Auto,Auto,Auto,Auto,Auto,Auto" >
+        
+        
+            <GroupBox Header="信机降级设置" Height="543" HorizontalAlignment="Left" Name="groupBox1" VerticalAlignment="Top" Width="708">
+                <Grid>
+                    <ComboBox Height="23" SelectedValue="{Binding cbxDegradationModel}" HorizontalAlignment="Left" Margin="93,32,0,0" Name="cbxDegradationModel" SelectionChanged="Degradation_SelectionChanged"  VerticalAlignment="Top" Width="96" />
+                    <Label Content="降级模式：" Height="28" HorizontalAlignment="Left" Margin="12,30,0,0" Name="label18" VerticalAlignment="Top" />
+                    <Button Command="{Binding DegradationCommand}" Content="保存" Height="23" HorizontalAlignment="Left" Margin="523,240,0,0" Name="button1" VerticalAlignment="Top" Width="75" />
+                    <Grid Height="162" HorizontalAlignment="Left" Margin="6,61,0,0" Name="grdDegradation" VerticalAlignment="Top" Width="684">
+                        
+                        
+                    
+                    <StackPanel Height="27" Name="stackPanel3" Orientation="Horizontal" Width="178" Margin="7,6,499,130">
+                        <Label Content="降级基准方案：" Height="28" Name="label19" Width="80" />
+                            <ComboBox Height="23" SelectedValue="{Binding cbxDegradationBaseSchedule}" Name="cbxDegradationBaseSchedule" Width="93" SelectionChanged="cbxDegradationBaseSchedule_SelectionChanged" />
+                    </StackPanel>
+                    <StackPanel Height="29" Name="stackPanel1" Orientation="Horizontal" Width="178" Margin="8,68,498,64">
+                        <Label Content="关键相位段时长：" Height="28" Name="label21" Width="80" />
+                            <TextBox Text="{Binding cbxDegradationKeyPhase}" Height="23" Name="cbxDegradationKeyPhase" Width="95" />
+                        </StackPanel>
+                    
+                    <StackPanel Height="27" Name="stackPanel2" Orientation="Horizontal" Width="177" Margin="8,39,499,96">
+                        <Label Content="各阶段时长：" Height="28" Name="label20" Width="80" />
+                            <TextBox Text="{Binding cbxDegradationStagePhaseTime}" Height="23" Name="cbxDegradationStagePhaseTime" Width="95" />
+                        </StackPanel>
+                        <Label Content="周期时长：" Height="28" HorizontalAlignment="Left" Margin="199,6,0,0" Name="label1" VerticalAlignment="Top" />
+                        <Label Height="28" HorizontalAlignment="Left" Margin="265,6,0,0" Name="lblCycle" VerticalAlignment="Top" Width="33" />
+                        <Label Content="总阶段:" Height="28" HorizontalAlignment="Left" Margin="304,6,0,0" Name="label2" VerticalAlignment="Top" />
+                        <Label Height="28" HorizontalAlignment="Left" Margin="355,6,0,0" Name="lblStage" VerticalAlignment="Top" Width="29" />
+                    </Grid>
+                </Grid>
+            </GroupBox>
+        </apexControls:ApexGrid>
+    </ScrollViewer>
+</UserControl>

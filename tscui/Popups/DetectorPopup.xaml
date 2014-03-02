@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="tscui.Popups.DetectorPopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:apexControls="clr-namespace:Apex.Controls;assembly=Apex"
+             mc:Ignorable="d" Height="300" Width="500">
+    <Grid>
+        <!--
+        <Border Background="White">
+            <Border.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="320" 
+                                        ShadowDepth="5" Opacity=".5" Softness="20">
+
+                </DropShadowBitmapEffect>
+            </Border.BitmapEffect>
+        </Border>
+        -->
+        <Border BorderBrush="{StaticResource ZuneColor1Brush}" BorderThickness="1" Background="White">
+
+            <apexControls:ApexGrid Margin="20,16,20,20"  Rows="Auto,Auto,*,Auto">
+
+                <!-- The zune colors at the top. -->
+                <Border Grid.Row="0" Height="7" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Offset="0" Color="{StaticResource ZuneColor2}" />
+                            <GradientStop Offset="1" Color="{StaticResource ZuneColor1}" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+                <!-- The title. -->
+                <TextBlock FontFamily="Segoe UI" FontSize="28" Margin="0,9,0,0" Height="65" VerticalAlignment="Top">检测器</TextBlock>
+
+       
+                <!-- The commands. -->
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal"
+                TextBlock.Foreground="{StaticResource ZuneDarkGrayBrush}" TextBlock.FontWeight="Bold" Margin="0,225,8,0" Width="120" Height="28" VerticalAlignment="Top">
+                    <Button Visibility="Hidden" x:Name="button_OK" Width="80" Height="28" Margin="0,0,12,0" Content="OK" Click="button_OK_Click"/>
+                    
+               
+                </StackPanel>
+                <WrapPanel  ItemHeight="40" ItemWidth="40" Height="152" HorizontalAlignment="Left" Margin="0,80,0,0" Name="wrapPanel1" VerticalAlignment="Top" Width="458">
+                    <Button Content="检01" x:Name="detector1" MouseDown="detector1_MouseDown" Click="detector1_Click" />
+                    <Button Content="检02" x:Name="detector2" Click="detector2_Click" />
+                    <Button Content="检03" x:Name="detector3" Click="detector3_Click" />
+                    <Button Content="检04" x:Name="detector4" Click="detector4_Click" />
+                    <Button Content="检05" x:Name="detector5" Click="detector5_Click" />
+                    <Button Content="检06" x:Name="detector6" Click="detector6_Click" />
+                    <Button Content="检07" x:Name="detector7" Click="detector7_Click" />
+                    <Button Content="检08" x:Name="detector8" Click="detector8_Click" />
+                    <Button Content="检09" x:Name="detector9" Click="detector9_Click" />
+                    <Button Content="检10" x:Name="detector10" Click="detector10_Click" />
+                    <Button Content="检11" x:Name="detector11" Click="detector11_Click" />
+                    <Button Content="检12" x:Name="detector12" Click="detector12_Click" />
+                    <Button Content="检13" x:Name="detector13" Click="detector13_Click" />
+                    <Button Content="检14" x:Name="detector14" Click="detector14_Click" />
+                    <Button Content="检15" x:Name="detector15" Click="detector15_Click" />
+                    <Button Content="检16" x:Name="detector16" Click="detector16_Click" />
+                    <Button Content="检17" x:Name="detector17" Click="detector17_Click" />
+                    <Button Content="检18" x:Name="detector18" Click="detector18_Click" />
+                    <Button Content="检19" x:Name="detector19" Click="detector19_Click" />
+                    <Button Content="检20" x:Name="detector20" Click="detector20_Click" />
+                    <Button Content="检21" x:Name="detector21" Click="detector21_Click" />
+                    <Button Content="检22" x:Name="detector22" Click="detector22_Click" />
+                    <Button Content="检23" x:Name="detector23" Click="detector23_Click" />
+                    <Button Content="检24" x:Name="detector24" Click="detector24_Click" />
+                    <Button Content="检25" x:Name="detector25" Click="detector25_Click" />
+                    <Button Content="检26" x:Name="detector26" Click="detector26_Click" />
+                    <Button Content="检27" x:Name="detector27" Click="detector27_Click" />
+                    <Button Content="检28" x:Name="detector28" Click="detector28_Click" />
+                    <Button Content="检29" x:Name="detector29" Click="detector29_Click" />
+                    <Button Content="检30" x:Name="detector30" Click="detector30_Click" />
+                    <Button Content="检31" x:Name="detector31" Click="detector31_Click" />
+                    <Button Content="检32" x:Name="detector32" Click="detector32_Click" />
+                    
+                </WrapPanel>
+            </apexControls:ApexGrid>
+
+        </Border>
+    </Grid>
+</UserControl>

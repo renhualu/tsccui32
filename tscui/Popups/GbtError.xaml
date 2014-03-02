@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="tscui.Views.GbtError"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:apexBehaviours="clr-namespace:Apex.Behaviours;assembly=Apex"
+             xmlns:apexControls="clr-namespace:Apex.Controls;assembly=Apex"
+             xmlns:my="clr-namespace:Apex.Behaviours;assembly=Apex"
+             xmlns:local="clr-namespace:tscui.Pages.ThePages"
+             mc:Ignorable="d" 
+             Height="300" Width="400" >
+    <Grid Margin="20">
+
+        <!--
+        <Border Background="White">
+            <Border.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="320" 
+                                        ShadowDepth="5" Opacity=".5" Softness="20">
+
+                </DropShadowBitmapEffect>
+            </Border.BitmapEffect>
+        </Border>
+        -->
+        <Border BorderBrush="{StaticResource ZuneColor1Brush}" BorderThickness="1" Background="White">
+
+            <apexControls:ApexGrid Margin="20,16,20,20"  Rows="Auto,Auto,*,Auto">
+
+                <!-- The zune colors at the top. -->
+                <Border Grid.Row="0" Height="7" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Offset="0" Color="{StaticResource ZuneColor2}" />
+                            <GradientStop Offset="1" Color="{StaticResource ZuneColor1}" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+                <!-- The title. -->
+                <TextBlock FontFamily="Segoe UI" FontSize="28" Height="37" Margin="0,6,0,0" VerticalAlignment="Top">操作失败</TextBlock>
+
+                <!-- The message. -->
+                <!-- The commands. -->
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal"
+                TextBlock.Foreground="{StaticResource ZuneDarkGrayBrush}" TextBlock.FontWeight="Bold" Margin="0,0,0,194"></StackPanel>
+                <Button x:Name="button_OK" Width="80" Height="28" Margin="232,188,6,6" Content="OK" Click="button_OK_Click" />
+                <TextBlock Style="{StaticResource Heading2Style}" TextWrapping="Wrap" Height="133" HorizontalAlignment="Left" Margin="6,49,0,0" Name="textBlock1" VerticalAlignment="Top" Width="306" >你好,信号机的<Span Foreground="{StaticResource ZuneColor1Brush}" FontWeight="Black">GBT协议差别</Span>，请联系厂家!</TextBlock>
+            </apexControls:ApexGrid>
+            
+        </Border>
+    </Grid>
+</UserControl>
